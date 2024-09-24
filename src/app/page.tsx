@@ -1,30 +1,61 @@
+"use client";
 
+import { useState, useEffect } from 'react';
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import styles from './page.module.css';
+
+interface Movie {
+  id: number;
+  title: string;
+  overview: string;
+  poster_path: string;
+}
 
 export default function Home() {
-  // const API_URL = 'https://api.themoviedb.org/3'
-  // const API_KEY = '49c9cb85300478a6d4052f8f18f2045f'
-  // const IMG_PATCH = 'https://image.tmdb.org/t/p/original'
-  // const URL_IMG = 'https://image.tmdb.org/t/p/original'
+  const [movies, setMovies] = useState<Movie[]>([]);
+  const [error, setError] = useState<Error | null>(null);
 
-  //Test commit daniel
-  fetch('https://api.themoviedb.org/3/movie/11?api_key=49c9cb85300478a6d4052f8f18f2045f')
-    .then(response => {
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
-      }
-      return response.json(); // Convierte la respuesta a JSON
-    })
-    .then(data => {
-      console.log(data, 'Mira Aqui'); // Trabaja con los datos recibidos de la API
-    })
-    .catch(error => {
-      console.error('Hubo un problema con la solicitud Fetch:', error);
-    });
+  useEffect(() => {
+    fetch('https://api.themoviedb.org/3/movie/popular?api_key=49c9cb85300478a6d4052f8f18f2045f')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json(); // Convert the response to JSON
+      })
+      .then(data => {
+        setMovies(data.results); // Save the data in the state
+      })
+      .catch(error => {
+        setError(error); // Save the error in the state
+      });
+  }, []);
 
+  if (error) {
+    return <div>Hubo un problema con la solicitud Fetch: {error.message}</div>;
+  }
+
+  if (movies.length === 0) {
+    return <div>Cargando...</div>;
+  }
 
   return (
-    <div>
-
+    <div className={styles.page}>
+      <h1>Películas Populares</h1>
+      <div className={styles['carousel-container']}>
+        <Carousel showThumbs={false} autoPlay infiniteLoop>
+          {movies.map(movie => (
+            <div key={movie.id}>
+              <img src={`https://image.tmdb.org/t/p/original${movie.poster_path}`} alt={movie.title} />
+              <div className="legend">
+                <h2>{movie.title}</h2>
+                <p>{movie.overview}</p>
+              </div>
+            </div>
+          ))}
+        </Carousel>
+      </div>
     </div>
   );
 }
