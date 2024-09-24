@@ -1,10 +1,10 @@
 
 
 export default function Home() {
-  const API_URL = 'https://api.themoviedb.org/3'
-  const API_KEY = '49c9cb85300478a6d4052f8f18f2045f'
-  const IMG_PATCH = 'https://image.tmdb.org/t/p/original'
-  const URL_IMG = 'https://image.tmdb.org/t/p/original'
+  // const API_URL = 'https://api.themoviedb.org/3'
+  // const API_KEY = '49c9cb85300478a6d4052f8f18f2045f'
+  // const IMG_PATCH = 'https://image.tmdb.org/t/p/original'
+  // const URL_IMG = 'https://image.tmdb.org/t/p/original'
 
   fetch('https://api.themoviedb.org/3/movie/11?api_key=49c9cb85300478a6d4052f8f18f2045f')
   .then(response => {
