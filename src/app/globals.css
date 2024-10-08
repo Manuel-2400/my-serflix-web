@@ -40,3 +40,14 @@ a {
     color-scheme: dark;
   }
 }
+
+.main-footer {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+.main-footer a, .main-footer h3 {
+  margin: 0 10px;
+}

@@ -41,21 +41,38 @@ export default function Home() {
   }
 
   return (
-    <div className={styles.page}>
-      <h1>Películas Populares</h1>
-      <div className={styles['carousel-container']}>
-        <Carousel showThumbs={false} autoPlay infiniteLoop>
-          {movies.map(movie => (
-            <div key={movie.id}>
-              <img src={`https://image.tmdb.org/t/p/original${movie.poster_path}`} alt={movie.title} />
-              <div className="legend">
-                <h2>{movie.title}</h2>
-                <p>{movie.overview}</p>
-              </div>
-            </div>
-          ))}
-        </Carousel>
+    <body>
+        <header>
+          <h1>SerFlix</h1>
+        </header>
+
+      <div className={styles.page}>
+        <main>
+          <div className={styles['carousel-container']}>
+          <h1>Películas Populares</h1>
+            <Carousel showThumbs={false} autoPlay infiniteLoop>
+              {movies.map(movie => (
+                <div key={movie.id}>
+                  <img src={`https://image.tmdb.org/t/p/original${movie.poster_path}`} alt={movie.title} />
+                  <div className="legend">
+                    <h2>{movie.title}</h2>
+                    <p>{movie.overview}</p>
+                  </div>
+                </div>
+              ))}
+            </Carousel>
+          </div>
+        </main>
       </div>
-    </div>
+      <footer className="main-footer">
+        <a href="https://www.themoviedb.org/">API Que Usamos</a>
+        <a href="https://github.com/Manuel-2400/my-serflix-web">Nuestro Repositorio</a>
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">No Des Click</a>
+        <h3>Copyright © 2024 SerFlix. All rights reserved.</h3>
+      </footer>
+
+
+    </body>
+    
   );
 }
