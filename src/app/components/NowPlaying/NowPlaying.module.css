@@ -1,0 +1,57 @@
+/* Contenedor principal del componente */
+.now-playing {
+  padding: 20px;
+  border-radius: 8px;
+  }
+  
+  /* Título de la sección */
+  .now-playing__title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Contenedor de las películas */
+  .now-playing__movies {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 15%)); /* Cada celda ocupará un máximo del 25% */
+    gap: 20px; /* Espacio entre las celdas */
+    justify-items: center; /* Centra cada celda dentro de su área de grid */
+    justify-content: center; /* Centra el grid en su contenedor */
+  }
+  
+  /* Contenedor individual de cada película */
+  .now-playing__movie {
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    background: #7B6CD9;
+    transition: transform 0.3s ease;
+  }
+  
+  .now-playing__movie:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Imagen de la película */
+  .now-playing__movie-poster {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  /* Título de la película */
+  .now-playing__movie-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  /* Fecha de estreno */
+  .now-playing__movie-release-date {
+    font-size: 14px;
+  }
+  
