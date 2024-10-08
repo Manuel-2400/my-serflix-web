@@ -52,7 +52,7 @@ export default function Home() {
                 <li><a href="#home">Inicio</a></li>
                 <li><a href="#now-playing">Cartelera</a></li>
                 <li><a href="#popular">Peliculas Populares</a></li>
-                <li><a href="#viewed">Mas Vistos</a></li>
+                <li><a href="#genres">Generos</a></li>
                 <li><a href="#rated">Mejores Calificados</a></li>     
               </ul>
           </nav>
@@ -88,9 +88,9 @@ export default function Home() {
          
             
 
-            <section id='viewed'>
+            <section id='genres'>
               <div className={styles.page}>
-                <h2>Mas Vistos</h2>
+                <h2>Generos</h2>
               </div>   
             </section>
 
