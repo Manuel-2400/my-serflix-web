@@ -42,33 +42,73 @@ export default function Home() {
 
   return (
     <body>
-        <header>
-          <h1>SerFlix</h1>
-        </header>
-
-      <div className={styles.page}>
-        <main>
-          <div className={styles['carousel-container']}>
-          <h1>Películas Populares</h1>
-            <Carousel showThumbs={false} autoPlay infiniteLoop>
-              {movies.map(movie => (
-                <div key={movie.id}>
-                  <img src={`https://image.tmdb.org/t/p/original${movie.poster_path}`} alt={movie.title} />
-                  <div className="legend">
-                    <h2>{movie.title}</h2>
-                    <p>{movie.overview}</p>
-                  </div>
-                </div>
-              ))}
-            </Carousel>
+      <section id="home">
+        <header className="main-header">
+          <div className="logo">
+            SerFlix
           </div>
-        </main>
-      </div>
+          <nav>
+              <ul className="nav-links">
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#now-playing">Cartelera</a></li>
+                <li><a href="#popular">Peliculas Populares</a></li>
+                <li><a href="#viewed">Mas Vistos</a></li>
+                <li><a href="#rated">Mejores Calificados</a></li>     
+              </ul>
+          </nav>
+        </header>
+      </section>
+
+        <div className={styles.page}>
+          <main>
+
+          <section id='now-playing'>
+            <div className={styles.page}>
+              <h1>En Cartelera</h1>
+            </div>        
+          </section>
+
+            
+          <section id='popular'>
+            <h2>Películas Populares</h2>
+            <div className={styles['carousel-container']}>
+              <Carousel showThumbs={false} autoPlay infiniteLoop showArrows>
+                {movies.map(movie => (
+                  <div key={movie.id}>
+                    <img src={`https://image.tmdb.org/t/p/original${movie.poster_path}`} alt={movie.title} />
+                    <div className="legend">
+                      <h2>{movie.title}</h2>
+                      <p>{movie.overview}</p>
+                    </div>
+                  </div>
+                ))}
+              </Carousel>
+            </div>
+          </section>
+         
+            
+
+            <section id='viewed'>
+              <div className={styles.page}>
+                <h2>Mas Vistos</h2>
+              </div>   
+            </section>
+
+            <section id='rated'>
+              <div className={styles.page}>
+                <h2>Mejores Calificados</h2>
+              </div>   
+            </section>
+
+          </main>
+        </div>      
+
       <footer className="main-footer">
-        <a href="https://www.themoviedb.org/">API Que Usamos</a>
-        <a href="https://github.com/Manuel-2400/my-serflix-web">Nuestro Repositorio</a>
-        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">No Des Click</a>
-        <h3>Copyright © 2024 SerFlix. All rights reserved.</h3>
+        <a href="#home">Inicio</a>
+        <a href="https://www.themoviedb.org/" target="_blank">API Que Usamos</a>
+        <a href="https://github.com/Manuel-2400/my-serflix-web" target="_blank">Nuestro Repositorio</a>
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Trabaja Con Nosotros</a>
+        <a>Copyright © 2024 SerFlix. All rights reserved.</a>
       </footer>
 
 
