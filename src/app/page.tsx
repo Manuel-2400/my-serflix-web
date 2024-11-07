@@ -42,14 +42,14 @@ export default function Home() {
 
   return (
     <body>
-        <header>
-          <h1>SerFlix</h1>
-        </header>
+      <header>
+        <h1>SerFlix</h1>
+      </header>
 
       <div className={styles.page}>
         <main>
           <div className={styles['carousel-container']}>
-          <h1>Películas Populares</h1>
+            <h1>Películas Populares</h1>
             <Carousel showThumbs={false} autoPlay infiniteLoop>
               {movies.map(movie => (
                 <div key={movie.id}>
@@ -73,6 +73,6 @@ export default function Home() {
 
 
     </body>
-    
+
   );
 }
