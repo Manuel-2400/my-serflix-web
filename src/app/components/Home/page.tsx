@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
 import styles from './page.module.css'; // Verifica que este archivo exista
-import NowPlaying from './components/NowPlaying';
+import NowPlaying from '../NowPlaying';
 
 interface Movie {
   id: number;
