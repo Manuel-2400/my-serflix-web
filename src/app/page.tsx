@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import { useState, useEffect } from 'react';
@@ -10,7 +11,7 @@ interface Movie {
   title: string;
   overview: string;
   poster_path: string;
-} 
+}
 
 export default function Home() {
   const [movies, setMovies] = useState<Movie[]>([]);
@@ -41,15 +42,15 @@ export default function Home() {
   }
 
   return (
-    <body>
-        <header>
-          <h1>SerFlix</h1>
-        </header>
+    <>
+      <header>
+        <h1>SerFlix</h1>
+      </header>
 
       <div className={styles.page}>
         <main>
           <div className={styles['carousel-container']}>
-          <h1>Películas Populares</h1>
+            <h1>Películas Populares</h1>
             <Carousel showThumbs={false} autoPlay infiniteLoop>
               {movies.map(movie => (
                 <div key={movie.id}>
@@ -70,9 +71,7 @@ export default function Home() {
         <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">No Des Click</a>
         <h3>Copyright © 2024 SerFlix. All rights reserved.</h3>
       </footer>
+    </>
 
-
-    </body>
-    
   );
 }
