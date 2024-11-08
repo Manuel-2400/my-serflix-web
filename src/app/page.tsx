@@ -2,13 +2,12 @@
 
 import { Main } from "@/layout/Main";
 
+
 export default function Home() {
 
     return (
-        <body>
-            <Main>
-                ...
-            </Main>
-        </body>
+        <Main>
+            Texto de prueba
+        </Main>
     );
 }
