@@ -1,13 +1,14 @@
 "use client";
 
+import { Carousel } from "@/components/Carousel";
 import { Main } from "@/layout/Main";
 
 
 export default function Home() {
 
-    return (
-        <Main>
-            Texto de prueba
-        </Main>
-    );
+  return (
+    <Main>
+      <Carousel />
+    </Main>
+  );
 }
