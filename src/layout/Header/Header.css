@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: white
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 50px;
+    background-color: black;
+}
+
+.logo {
+    text-decoration: none;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+
+}
+
+.nav-link {
+    text-decoration: none;
+}
