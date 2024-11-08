@@ -10,7 +10,7 @@ interface Movie {
   title: string;
   overview: string;
   poster_path: string;
-}
+} 
 
 export default function Home() {
   const [movies, setMovies] = useState<Movie[]>([]);
