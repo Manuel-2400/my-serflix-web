@@ -1,8 +1,7 @@
 import React from "react";
 import { MainProps } from "./types";
-import { Header } from "../Header";
-import { Footer } from "../Footer";
-
+import { Header } from "./subComponents/Header/header";
+import { Footer } from "./subComponents/Footer/footer";
 
 export function Main (props:MainProps) {
     const {children} = props;

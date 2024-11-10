@@ -1,4 +1,5 @@
 import React from 'react';
+/*import './footer.css';*/
 
 export const Footer = () => {
   return (
@@ -8,7 +9,7 @@ export const Footer = () => {
           <div className="col-md-3">
             <h4>Nosotros</h4>
             <ul>
-              <li><a href="#">Sobre Nosotros</a></li>
+              <li><a href="aboutUs.tsx">Sobre Nosotros</a></li>
             </ul>
           </div>
           <div className="col-md-3">

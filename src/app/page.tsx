@@ -1,6 +1,6 @@
 "use client";
 
-import { Main } from "@/layout/Main";
+import { Main } from "@/layout/Main/main";
 
 
 export default function Home() {
