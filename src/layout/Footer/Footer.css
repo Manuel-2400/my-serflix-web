@@ -1,25 +1,29 @@
 .footer {
-    padding: 20px;
-    background: white;
-    color: black;
+    padding: 40px 20px;
+    background: #1a1a1a;
+    color: white;
+    font-family: Arial, sans-serif;
 }
 
 .footer-section {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     padding: 20px 0;
-    background-color: white;
+    border-bottom: 1px solid #333;
 }
 
 .footer-column {
     flex: 1;
-    margin-right: 20px;
+    margin: 20px;
+    min-width: 200px;
 }
 
 .footer-title {
-    font-size: 18px;
-    margin-bottom: 10px;
-    color: #000000;
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #f2f2f2;
+    text-transform: uppercase;
 }
 
 .footer-list {
@@ -28,26 +32,86 @@
 }
 
 .footer-link {
-    color: #000000;
+    color: #b3b3b3;
     text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+    transition: color 0.3s;
+}
+
+.footer-link:hover {
+    color: #ffffff;
 }
 
 .footer-social {
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 .social-link {
-    color: #000000;
-    margin-right: 10px;
-    font-size: 20px;
+    color: #b3b3b3;
+    margin-right: 15px;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.social-link:hover {
+    color: #ffffff;
 }
 
 .footer-bottom {
+    display: flex;
     text-align: center;
-    padding: 10px 0;
-    background-color: white;
+    padding: 20px 0;
+    background-color: #111;
+    width: 100%;
+    justify-content: center;
 }
 
 .footer-copyright {
-    color: black;
+    color: #b3b3b3;
+    margin: 0;
+}
+
+.footer-subscribe {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.subscribe-title {
+    font-size: 18px;
+    color: #f2f2f2;
+    margin-bottom: 10px;
+}
+
+.subscribe-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.subscribe-input {
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+.subscribe-button {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: #f2f2f2;
+    color: #1a1a1a;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.subscribe-button:hover {
+    background-color: #e0e0e0;
 }

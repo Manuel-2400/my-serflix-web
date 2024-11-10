@@ -5,7 +5,7 @@
 
   --button-primary-hover: #383838;
   --button-secondary-hover: #f2f2f2;
-
+  background-color: black;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -37,7 +37,9 @@
 }
 
 .carousel-container h1 {
-  color: black; /* Añade esta línea para darle color negro al h1 */
+  color: white; 
+  margin-bottom: 32px;
+  display: flex;
 }
 
 .carousel-container {
@@ -45,70 +47,96 @@
   justify-content: center;
   align-items: center;
   width: 100%;
+  height: auto; /* Ajusta la altura automáticamente */
   flex-direction: column;
-  max-width: 800px; /* Ajusta el ancho máximo según tus necesidades */
+  max-width: 800px; /* Ajusta el ancho máximo */
   margin: 0 auto;
+  padding: 20px;
+  background: linear-gradient(135deg, #1a1a1a, #333); /* Fondo degradado */
+  border-radius: 15px; /* Bordes redondeados */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Sombra */
+  transition: transform 0.3s, box-shadow 0.3s; /* Transición para el hover */
+}
+
+.carousel-container:hover {
+  transform: scale(1.02); /* Aumenta el tamaño al hacer hover */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7); /* Sombra más intensa al hacer hover */
 }
 
 .carousel .slide img {
   width: 100%;
-  height: auto; 
+  height: 100px; /* Ajusta la altura de la imagen */
+  object-fit: cover; /* Asegura que la imagen cubra el área del contenedor */
+  border-radius: 15px; 
 }
 
 .carousel .legend {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.7); /* Fondo más oscuro */
   color: white;
-  padding: 10px;
+  padding: 15px; /* Más padding */
   text-align: center;
+  border-radius: 0 0 15px 15px; /* Bordes redondeados en la parte inferior */
 }
 
 .carousel .legend h2 {
   margin: 0;
-  font-size: 1.5em;
+  font-size: 1.8em; /* Tamaño de fuente más grande */
 }
 
 .carousel .legend p {
+  margin: 10px 0 0;
+  font-size: 1.2em; /* Tamaño de fuente más grande */
+}
+
+.movie-section {
+  width: 100%;
+  padding: 20px 0;
+}
+
+.movie-section h2 {
+  color: white;
+  margin-bottom: 20px;
+}
+
+.movie-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Divide en dos columnas */
+  gap: 20px;
+}
+
+.movie-card {
+  background-color: #333;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 100%; /* Ajusta el ancho al 100% del contenedor */
+  height: 100%; /* Ajusta la altura al 100% del contenedor */
+  flex-shrink: 0;
+  transition: transform 0.3s, box-shadow 0.3s; /* Añade transición para el hover */
+}
+
+.movie-card:hover {
+  transform: scale(1.05); /* Aumenta el tamaño al hacer hover */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Añade sombra al hacer hover */
+}
+
+.movie-card img {
+  width: 100%;
+  height: 200px; /* Ajusta la altura de la imagen */
+  object-fit: cover; /* Asegura que la imagen cubra el área del contenedor */
+}
+
+.movie-card-details {
+  padding: 10px;
+  color: white;
+}
+
+.movie-card-details h3 {
   margin: 0;
-  font-size: 1em;
+  font-size: 1em; /* Tamaño de fuente más pequeño */
 }
 
-@media (max-width: 600px) {
-  .page {
-    padding: 32px;
-    padding-bottom: 80px;
-  }
-
-  .main {
-    align-items: center;
-  }
-
-  .main ol {
-    text-align: center;
-  }
-
-  .ctas {
-    flex-direction: column;
-  }
-
-  .ctas a {
-    font-size: 14px;
-    height: 40px;
-    padding: 0 16px;
-  }
-
-  a.secondary {
-    min-width: auto;
-  }
-
-  .footer {
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .logo {
-    filter: invert();
-  }
+.movie-card-details p {
+  margin: 5px 0 0;
+  font-size: 0.8em; /* Tamaño de fuente más pequeño */
+  color: #aaa;
 }

@@ -44,26 +44,43 @@ export default function Home() {
 
   return (
     <>
-    <Header />
-    <div className={styles.page}>
-      <main>
-        <div className={styles['carousel-container']}>
-          <h1>Películas Populares</h1>
-          <Carousel showThumbs={false} autoPlay infiniteLoop>
-            {movies.map(movie => (
-              <div key={movie.id}>
-                <img src={`https://image.tmdb.org/t/p/original${movie.poster_path}`} alt={movie.title} />
-                <div className="legend">
-                  <h2>{movie.title}</h2>
-                  <p>{movie.overview}</p>
+      <Header />
+      <div className={styles.page}>
+        <main className={styles.main}>
+          <div className={styles['carousel-container']}>
+            <h1>Películas Populares</h1>
+            <Carousel showThumbs={false} autoPlay infiniteLoop>
+              {movies.map(movie => (
+                <div key={movie.id}>
+                  <img src={`https://image.tmdb.org/t/p/original${movie.poster_path}`} alt={movie.title} />
+                  <div className="legend">
+                    <h2>{movie.title}</h2>
+                    <p>{movie.overview}</p>
+                  </div>
                 </div>
-              </div>
-            ))}
-          </Carousel>
-        </div>
-      </main>
-    </div>
-    <Footer />
-  </>
+              ))}
+            </Carousel>
+          </div>
+
+          <div className={styles['movie-section']}>
+            <h2>Películas Populares</h2>
+            <div className={styles['movie-cards']}>
+              {movies.map(movie => (
+                <div key={movie.id} className={styles['movie-card']}>
+                  <img src={`https://image.tmdb.org/t/p/original${movie.poster_path}`} alt={movie.title} />
+                  <div className={styles['movie-card-details']}>
+                    <h3>{movie.title}</h3>
+                    <p>{movie.overview}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Puedes agregar más secciones de películas aquí */}
+        </main>
+      </div>
+      <Footer />
+    </>
   );
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import './Header.css'
+import './Header.css';
 
 export const Header = () => {
   return (
@@ -9,22 +9,34 @@ export const Header = () => {
       <nav className="nav">
         <ul className="nav-links">
           <li>
-            <Link href="#now-playing" className="nav-link">Cartelera</Link>
+            <Link href="#now-playing" legacyBehavior>
+              <a className="nav-link">Cartelera</a>
+            </Link>
           </li>
           <li>
-            <Link href="#genres" className="nav-link">Generos</Link>
+            <Link href="#genres" legacyBehavior>
+              <a className="nav-link">Generos</a>
+            </Link>
           </li>
           <li>
-            <Link href="#popular" className="nav-link">Populares</Link>
+            <Link href="#popular" legacyBehavior>
+              <a className="nav-link">Populares</a>
+            </Link>
           </li>
           <li>
-            <Link href="#rated" className="nav-link">Mejores Calificados</Link>
+            <Link href="#rated" legacyBehavior>
+              <a className="nav-link">Mejores Calificados</a>
+            </Link>
           </li>
           <li>
-            <Link href="#soon" className="nav-link">Proximamente</Link>
+            <Link href="#soon" legacyBehavior>
+              <a className="nav-link">Proximamente</a>
+            </Link>
           </li>
         </ul>
-        <Link href="/iniciar-sesion" className="nav-link">Iniciar sesion</Link>
+        <Link href="/iniciar-sesion" legacyBehavior>
+          <a className="nav-link login">Iniciar sesión</a>
+        </Link>
       </nav>
     </header>
   );

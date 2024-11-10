@@ -1,35 +1,72 @@
 * {
     margin: 0;
     padding: 0;
-    color: white
+    box-sizing: border-box;
 }
-
+.main-content {
+    margin-top: 70px; /* Ajusta este valor según la altura de tu header */
+}
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 50px;
-    background-color: black;
+    padding: 10px 30px;
+    background-color: #1a1a1a; /* Fondo oscuro para el header */
+    color: white;
+    font-family: Arial, sans-serif;
+    position: fixed; /* Fija el header en la parte superior */
+    top: 0; /* Posición en la parte superior */
+    width: 100%; /* Ancho completo */
+    z-index: 1000; /* Asegura que el header esté por encima de otros elementos */
 }
 
 .logo {
     text-decoration: none;
+    font-size: 20px; /* Tamaño de fuente más pequeño */
+    font-weight: bold;
+    color: white;
 }
 
 .nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 15px;
+    background-color: #333; /* Fondo diferente para el nav */
+    padding: 10px 20px;
+    border-radius: 5px; /* Bordes redondeados para el nav */
 }
 
 .nav-links {
     list-style-type: none;
     display: flex;
-    gap: 20px;
-
+    gap: 15px;
 }
 
 .nav-link {
     text-decoration: none;
+    color: white;
+    font-size: 14px; /* Tamaño de fuente más pequeño */
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #f2f2f2;
+}
+
+.nav-link.active {
+    border-bottom: 2px solid #f2f2f2;
+}
+
+.nav-link.login {
+    background-color: #f2f2f2;
+    color: black;
+    padding: 8px 16px; /* Tamaño de padding más pequeño */
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-link.login:hover {
+    background-color: #e0e0e0;
+    color: black;
 }
