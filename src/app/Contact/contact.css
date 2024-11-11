@@ -1,0 +1,12 @@
+.banner {
+    background-size: cover;
+    color: white;
+    padding: 50px;
+    text-align: center;
+  }
+  
+  .contact-info, .contact-form, .team-list {
+    margin: 20px;
+    padding: 20px;
+  }
+  

@@ -1,0 +1,16 @@
+.team-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+  
+.team-member {
+    text-align: center;
+    margin: 20px;
+}
+
+.team-member img {
+    border-radius: 10px;
+    max-width: 200px;
+   margin-bottom: 10px;
+}
