@@ -9,7 +9,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(to bottom right, #000000 32%, #141414 51%, #8b0000 44%);
+    background: linear-gradient(to bottom right, #000000 32%, #141414 51%, rgb(164, 38, 44) 44%);
+    transition: background 1.5s ease;
+  }
+  
+  .YourLogin {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom right, #000000 32%, #141414 51%, rgb(164, 38, 44) 44%);
     transition: background 1.5s ease;
   }
   
