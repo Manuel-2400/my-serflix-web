@@ -11,16 +11,29 @@ export default function Home() {
   return (
     <Main>
       {isLoggedIn ?
-
-        <section>
-          No estas logeado
-          <Button onClick={logout}>Logearte</Button>
+        <section className="Login">
+          <div className="wrapper">
+            <form action="#">
+              <h2>Login</h2>
+              <div className="input-field">
+                <input type="text" required />
+                <label>Enter your email</label>
+              </div>
+              <div className="input-field">
+                <input type="password" required />
+                <label>Enter your password</label>
+              </div>
+              <button type="submit" onClick={logout}>Log In</button>
+              <div className="register">
+                <p>Dont have an account? <a href="#">Register</a></p>
+              </div>
+            </form>
+          </div>
         </section>
         :
-        <section>
+        <section className="YourLogin">
           Estas logeado
           <Button onClick={login}>Salirte</Button>
-
         </section>
       }
     </Main>
