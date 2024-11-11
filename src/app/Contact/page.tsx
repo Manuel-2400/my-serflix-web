@@ -1,12 +1,12 @@
 import React from 'react';
-import { Header } from "../../layout/Main/subComponents/Header/header";
-import { Footer } from "../../layout/Main/subComponents/Footer/footer";
 import './contact.css';
+// import Image from 'next/image';
+import { Main } from '@/layout/Main/main';
 
-export const Contact: React.FC = () => {
+const Contact = () => {
   return (
+    <Main>
     <div className="contacto-page">
-    <Header />
       {/* Banner con imagen de fondo */}
       <section className="banner">
         <h1>Contáctanos</h1>
@@ -28,7 +28,7 @@ export const Contact: React.FC = () => {
 
       {/* Mapa */}
       <section className="map">
-        <img src="map-placeholder.png" alt="Ubicación en el mapa" />
+        {/* <Image width={1} height={1} src="map-placeholder.png" alt="Ubicación en el mapa" /> */}
       </section>
 
       {/* Formulario de contacto */}
@@ -46,7 +46,9 @@ export const Contact: React.FC = () => {
           <button type="submit">ENVIAR</button>
         </form>
       </section>
-      <Footer />
     </div>
+    </Main>
   );
 };
+
+export default Contact

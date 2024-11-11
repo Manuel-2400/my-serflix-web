@@ -3,7 +3,7 @@ import { Header } from "../../layout/Main/subComponents/Header/header";
 import { Footer } from "../../layout/Main/subComponents/Footer/footer";
 import './terms.css';
 
-export const Terms: React.FC = () => {
+const Terms = () => {
   return (
     <div className="terms-and-conditions">
       <Header />
@@ -35,3 +35,5 @@ export const Terms: React.FC = () => {
     </div>
   );
 };
+
+export default Terms
