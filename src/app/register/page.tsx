@@ -12,11 +12,11 @@ const Register = () => {
                         <h2>Registrate</h2>
                         <div className="input-field">
                             <input type="text" required />
-                            <label>Enter your email</label>
+                            <label>Ingrese Su Correo</label>
                         </div>
                         <div className="input-field">
                             <input type="password" required />
-                            <label>Enter your password</label>
+                            <label>Ingresa Su Contraseña</label>
                         </div>
                         <button type="submit">Crear cuenta</button>
                     </form>

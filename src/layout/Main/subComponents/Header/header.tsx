@@ -39,7 +39,7 @@ export const Header = () => {
           {isLoggedIn ? (
             <li><Button className="nav-link" onClick={logout}>Salir</Button></li>
           ) : (
-            <li><Button className="nav-link" href="/login">Login</Button></li>
+            <li><Button className="nav-link" href="/working">Login</Button></li>
           )}
         </ul>
       </nav>
