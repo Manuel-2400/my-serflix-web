@@ -2,11 +2,10 @@
 
 import { Main } from "@/layout/Main/main";
 import './body.css'
-import { useAuth } from "@/hooks/useAuth";
-import { useState } from "react";
+import { useAuthContext } from "@/context/AuthContext";
 
 export default function Home() {
-  const { isLoggedIn, logout, login } = useAuth()
+  const { isLoggedIn, login } = useAuthContext();
   return (
     <Main>
       {isLoggedIn ?

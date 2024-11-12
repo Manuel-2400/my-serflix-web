@@ -1,83 +1,191 @@
-/* Estilos generales */
-.genres-container {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+/* Aplicar fuente Arial a todo el contenido */
+body, .genres-container {
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .genres-container {
     padding: 20px;
     background: black;
-    width: 100%;
   }
   
-  .genre-block {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    border-radius: 8px;
-    background-color: #141414;
-    padding: 20px;
-    text-align: center;
+  .genre-section {
+    margin-bottom: 40px;
   }
   
-  .genre-image {
-    height: 180px;
-    object-fit: cover;
-    border-radius: 8px;
-  } 
-  
-  .genre-title {
-    font-size: 1.8rem;
+  .genre-section h2 {
+    font-size: 2.2em;
+    font-weight: 600;
+    margin-bottom: 16px;
     color: #fff;
-    margin: 15px 0;
+    letter-spacing: -0.5px;
   }
   
-  .genre-description {
-    font-size: 1rem;
-    color: #ccc;
-    margin-bottom: 15px;
+  .movies-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-around; /* Asegura que las películas se centren */
+    align-items: center;
   }
   
-  .explore-button {
+  /* Estilos para las tarjetas de las películas */
+  .movie-card {
+    position: relative;
+    width: 150px; /* Definir un tamaño base de la tarjeta */
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    margin-bottom: 10px; /* Añadir margen inferior para evitar que se apilen */
+    display: flex;
+    justify-content: center; /* Centra las tarjetas dentro de su contenedor */
+  }
+  
+  .movie-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .movie-image {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  .movie-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    border-radius: 8px;
+    transition: opacity 0.3s ease;
+  }
+  
+  .movie-card:hover .movie-overlay {
+    opacity: 1;
+  }
+  
+  .info-button {
     background-color: #e50914;
     color: #fff;
     border: none;
-    padding: 10px 20px;
+    padding: 10px 16px;
+    font-size: 1em;
+    font-weight: 500;
+    border-radius: 4px;
     cursor: pointer;
-    font-size: 1rem;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
   }
   
-  .explore-button:hover {
-    background-color: #b20710;
+  .info-button:hover {
+    background-color: #f40612;
   }
   
-  /* Responsive design */
-  @media screen and (max-width: 768px) {
+  /* Estilos mejorados para el popover */
+  .popover-content {
+    background-color: #111;
+    padding: 16px;
+    width: 350px;
+    color: #fff;
+    border-radius: 8px;
+  }
+  
+  .popover-content iframe {
+    margin-bottom: 8px;
+    border-radius: 8px;
+  }
+  
+  .popover-content h6,
+  .popover-content p,
+  .popover-content span {
+    color: #fff;
+  }
+  
+  .popover-content .MuiTypography-h6 {
+    font-size: 1.3em;
+    font-weight: 600;
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+  }
+  
+  .popover-content .MuiTypography-body2 {
+    font-size: 1.1em;
+    margin-bottom: 12px;
+  }
+  
+  .popover-content .MuiTypography-subtitle2 {
+    font-size: 1em;
+    color: #aaa;
+  }
+  
+  .movie-overlay .MuiButton-contained {
+    background-color: #f50057;
+    color: white;
+  }
+  
+  /* Media Queries para hacer el componente responsive */
+  
+  /* Pantallas pequeñas (celulares) */
+  @media (max-width: 600px) {
     .genres-container {
-      flex-direction: column;
-      align-items: center;
+      padding: 10px;
     }
-    
-    .genre-block {
+  
+    .genre-section h2 {
+      font-size: 1.5em;
+    }
+  
+
+  
+    .movie-card {
       width: 100%;
-      max-width: 350px;
+      max-width: 250px;
       margin-bottom: 20px;
     }
+  
+    .popover-content {
+      width: 100%;
+      max-width: 350px;
+    }
   }
   
-  @media screen and (max-width: 480px) {
-    .genre-title {
-      font-size: 1.5rem;
+  /* Pantallas medianas (tabletas) */
+  @media (max-width: 1024px) {
+    .genres-container {
+      padding: 15px;
     }
   
-    .genre-description {
-      font-size: 0.9rem;
+    .genre-section h2 {
+      font-size: 1.8em;
     }
   
-    .explore-button {
-      font-size: 0.9rem;
-      padding: 8px 16px;
+
+    .movie-card {
+      width: 200px;
+      margin-bottom: 15px;
+    }
+  }
+  
+  /* Pantallas grandes (escritorios) */
+  @media (min-width: 1025px) {
+    .genres-container {
+      padding: 20px;
+    }
+  
+    .genre-section h2 {
+      font-size: 2.2em;
+    }
+  
+
+  
+    .movie-card {
+      width: 250px;
+      margin-bottom: 20px;
+    }
+  
+    .popover-content {
+      width: 350px;
     }
   }
   

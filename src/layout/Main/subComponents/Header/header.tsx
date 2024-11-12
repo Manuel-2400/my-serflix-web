@@ -3,12 +3,12 @@ import React, { useState } from "react";
 import Link from "next/link";
 import './header.css';
 import { Button } from "@mui/material";
-import { useAuth } from "@/hooks/useAuth";
+import { useAuthContext } from "@/context/AuthContext";
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const { isLoggedIn, logout } = useAuth()
+  const { isLoggedIn, logout } = useAuthContext();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
