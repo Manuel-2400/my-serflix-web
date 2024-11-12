@@ -11,17 +11,17 @@ const Developer = () => {
   const teamMembers = [
     {
       nombre: 'Daniel Angel Escobar',
-      descripcion: 'Desarrollador Front-End, Gerente de Desarrollo',
+      descripcion: 'Desarrollador Front-End, Gerente TI',
       imagen: ImageDani,
     },
     {
       nombre: 'Manuela Escobar',
-      descripcion: 'Desarrolladora Back-End, Gerente de RRHH',
+      descripcion: 'Desarrolladora Back-End, Gerente de Desarrollo',
       imagen: ImageManuela,
     },
     {
       nombre: 'Manuel Valenzuela',
-      descripcion: 'Desarrollador Front-End, Gerente de Asuntos Internos',
+      descripcion: 'Desarrollador Front-End, Gerente General',
       imagen: ImageManuel,
     },
   ];
