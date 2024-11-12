@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import { useEffect, useState } from 'react';
@@ -84,15 +85,15 @@ const Genres = () => {
             <div className="movies-list">
               {moviesByGenre[genre.id]?.map((movie) => (
                 <div key={movie.id} className="movie-card">
-                  <img 
-                    src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`} 
-                    alt={movie.title} 
-                    className="movie-image" 
+                  <img
+                    src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`}
+                    alt={movie.title}
+                    className="movie-image"
                   />
                   <div className="movie-overlay">
-                    <Button 
-                      variant="contained" 
-                      color="primary" 
+                    <Button
+                      variant="contained"
+                      color="primary"
                       onClick={(event) => fetchTrailer(movie, event)}
                     >
                       Ver más
@@ -120,13 +121,13 @@ const Genres = () => {
       >
         <div className="popover-content">
           {selectedTrailer && (
-            <iframe 
-              width="100%" 
-              height="315" 
-              src={`https://www.youtube.com/embed/${selectedTrailer}`} 
+            <iframe
+              width="100%"
+              height="315"
+              src={`https://www.youtube.com/embed/${selectedTrailer}`}
               title="Trailer"
-              frameBorder="0" 
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
             ></iframe>
           )}
@@ -134,8 +135,8 @@ const Genres = () => {
             <>
               <Typography variant="h6" gutterBottom>{selectedMovie.title}</Typography>
               <Typography variant="body2" gutterBottom>{selectedMovie.overview}</Typography>
-              <Typography variant="subtitle2" gutterBottom>Géneros: 
-                {selectedMovie.genre_ids.map(id => 
+              <Typography variant="subtitle2" gutterBottom>Géneros:
+                {selectedMovie.genre_ids.map(id =>
                   genres.find(g => g.id === id)?.name
                 ).join(', ')}
               </Typography>

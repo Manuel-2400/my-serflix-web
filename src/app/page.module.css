@@ -1,0 +1,216 @@
+.page {
+  --gray-rgb: 0, 0, 0;
+  --gray-alpha-200: rgba(var(--gray-rgb), 0.08);
+  --gray-alpha-100: rgba(var(--gray-rgb), 0.05);
+
+  --button-primary-hover: #383838;
+  --button-secondary-hover: #f2f2f2;
+  background-color: #141414;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; 
+  padding: 20px;
+  gap: 64px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  .page {
+    --gray-rgb: 255, 255, 255;
+    --gray-alpha-200: rgba(var(--gray-rgb), 0.145);
+    --gray-alpha-100: rgba(var(--gray-rgb), 0.06);
+
+    --button-primary-hover: #ccc;
+    --button-secondary-hover: #1a1a1a;
+  }
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.carousel-container h1 {
+  color: white; 
+  margin-bottom: 32px;
+  display: flex;
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto; 
+  flex-direction: column;
+  max-width: 600px; 
+  margin: 0 auto;
+  padding: 55px;
+  background: linear-gradient(135deg, #1a1a1a, #333); 
+  border-radius: 15px; 
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); 
+  transition: transform 0.3s, box-shadow 0.3s; 
+}
+
+.carousel-container:hover {
+  transform: scale(1.02); 
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7);
+}
+
+.carousel .slide img {
+  width: 100%;
+  height: 300px; 
+  object-fit: cover;
+  border-radius: 15px; 
+  transition: transform 0.3s ease-in-out;
+}
+
+.carousel .slide img:hover {
+  transform: scale(1.05); 
+}
+
+.carousel .legend {
+  background: rgba(0, 0, 0, 0.7); 
+  color: white;
+  padding: 30px; 
+  text-align: center;
+  border-radius: 0 0 15px 15px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.carousel .legend h2 {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.carousel .legend p {
+  margin: 10px 0 0;
+  font-size: 0.8em; 
+}
+
+.carousel-item {
+  position: relative;
+}
+
+.iframe-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin-top: 30%;
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3em;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  padding: 10px 20px;
+  cursor: pointer;
+  display: none;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.carousel-item:hover .play-button {
+  display: block;
+}
+
+.play-button:hover {
+  background-color: rgba(255, 0, 0, 0.7);
+}
+
+.movie-section {
+  width: 100%;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.movie-section h2 {
+  color: white;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.movie-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px; 
+  justify-content: center; 
+}
+
+.movie-card {
+  background-color: #333;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 100%; 
+  height: auto; 
+  flex-shrink: 0;
+  transition: transform 0.3s, box-shadow 0.3s; 
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  animation: fadeIn 1s ease-in-out;
+}
+
+.movie-card:hover {
+  transform: scale(1.05); 
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.movie-card img {
+  width: 100%;
+  height: 350px; 
+  object-fit: cover; 
+  transition: transform 0.3s ease-in-out;
+}
+
+.movie-card img:hover {
+  transform: scale(1.05);
+}
+
+.movie-card-details {
+  padding: 10px;
+  color: white;
+  text-align: center;
+}
+
+.movie-card-details h3 {
+  margin: 0;
+  font-size: 1.5em; 
+}
+
+.movie-card-details p {
+  margin: 5px 0 0;
+  font-size: 1em; 
+  color: #aaa;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

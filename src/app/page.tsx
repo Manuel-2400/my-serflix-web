@@ -4,46 +4,45 @@ import { Main } from "@/layout/Main/main";
 import './body.css'
 import './../app/Contact/contact.css';
 import { useAuthContext } from "@/context/AuthContext";
-import { useState, useEffect } from 'react';
 import Image from "next/image";
 import Link from 'next/link';
 import { Button } from '@mui/material';
 import imageControl from './../img/img-controlTv.jpg';
 import imageStart from './../img/img-Start.jpg';
 
-type Movie = {
-  id: number;
-  title: string;
-  poster_path: string;
-};
+// type Movie = {
+//   id: number;
+//   title: string;
+//   poster_path: string;
+// };
 
 export default function Home() {
   const { isLoggedIn, login } = useAuthContext();
 
-  // Mover el estado ahora al componente principal
-  const [nowPlayingMovies, setNowPlayingMovies] = useState<Movie[]>([]);
+  // // Mover el estado ahora al componente principal
+  // const [nowPlayingMovies, setNowPlayingMovies] = useState<Movie[]>([]);
 
-  // Fetch de las películas ahora en el componente principal
-  useEffect(() => {
-    const fetchMovies = async () => {
-      try {
-        const response = await fetch(
-          `https://api.themoviedb.org/3/movie/now_playing?api_key=49c9cb85300478a6d4052f8f18f2045f&language=es-ES&page=1`
-        );
-        const data = await response.json();
-        setNowPlayingMovies(data.results.slice(0, 8)); // Solo toma las primeras 8 películas
-      } catch (error) {
-        console.error("Error fetching movies:", error);
-      }
-    };
+  // // Fetch de las películas ahora en el componente principal
+  // useEffect(() => {
+  //   const fetchMovies = async () => {
+  //     try {
+  //       const response = await fetch(
+  //         `https://api.themoviedb.org/3/movie/now_playing?api_key=49c9cb85300478a6d4052f8f18f2045f&language=es-ES&page=1`
+  //       );
+  //       const data = await response.json();
+  //       setNowPlayingMovies(data.results.slice(0, 8)); // Solo toma las primeras 8 películas
+  //     } catch (error) {
+  //       console.error("Error fetching movies:", error);
+  //     }
+  //   };
 
-    fetchMovies();
-  }, []);
+  //   fetchMovies();
+  // }, []);
 
   return (
     <Main>
       {isLoggedIn ? (
-        <section className="YourLogin">          
+        <section className="YourLogin">
 
           <section className="banner">
             <div className="banner-text">

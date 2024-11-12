@@ -1,9 +1,12 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
 import { useEffect, useState } from 'react';
 import { Main } from '@/layout/Main/main';
 import { Popover, Button, Typography } from '@mui/material';
+import { Carousel } from 'react-responsive-carousel';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import './billboard.css';
 
 type Movie = {
@@ -19,11 +22,12 @@ type Video = {
   type: string;
 };
 
-const billboard = () => {
-  const [nowPlayingMovies, setNowPlayingMovies] = useState<Movie[]>([]); // Renombrado para más claridad
+const Billboard = () => {
+  const [nowPlayingMovies, setNowPlayingMovies] = useState<Movie[]>([]);
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const [selectedMovie, setSelectedMovie] = useState<Movie | null>(null);
   const [selectedTrailer, setSelectedTrailer] = useState<string | null>(null);
+  const [playingTrailerId, setPlayingTrailerId] = useState<number | null>(null); // ID de la película en reproducción en el carrusel
 
   useEffect(() => {
     const fetchMovies = async () => {
@@ -32,7 +36,7 @@ const billboard = () => {
           `https://api.themoviedb.org/3/movie/now_playing?api_key=49c9cb85300478a6d4052f8f18f2045f&language=es-ES&page=1`
         );
         const data = await response.json();
-        setNowPlayingMovies(data.results);  // Almacena las películas en cartelera
+        setNowPlayingMovies(data.results);
       } catch (error) {
         console.error("Error fetching movies:", error);
       }
@@ -41,9 +45,11 @@ const billboard = () => {
     fetchMovies();
   }, []);
 
-  const fetchTrailer = async (movie: Movie, event: React.MouseEvent<HTMLElement>) => {
-    setAnchorEl(event.currentTarget);
-    setSelectedMovie(movie);
+  const fetchTrailer = async (movie: Movie, event?: React.MouseEvent<HTMLElement>) => {
+    if (event) {
+      setAnchorEl(event.currentTarget);
+      setSelectedMovie(movie);
+    }
 
     try {
       const response = await fetch(
@@ -53,6 +59,7 @@ const billboard = () => {
 
       const trailer = data.results.find((video: Video) => video.type === 'Trailer');
       setSelectedTrailer(trailer ? trailer.key : null);
+      if (!event) setPlayingTrailerId(movie.id); // Solo para el carrusel
     } catch (error) {
       console.error("Error fetching trailer:", error);
     }
@@ -66,29 +73,63 @@ const billboard = () => {
 
   return (
     <Main>
-      <section className='billboard'>
+      <section className="movie-section">
+        <div className="carousel-container">
+          <h1>Películas Populares</h1>
+          <Carousel showThumbs={false} autoPlay infiniteLoop>
+            {nowPlayingMovies.map((movie) => (
+              <div key={movie.id} className="carousel-item">
+                {playingTrailerId === movie.id && selectedTrailer ? (
+                  <div className="iframe-container">
+                    <iframe
+                      width="560"
+                      height="315"
+                      src={`https://www.youtube.com/embed/${selectedTrailer}`}
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    ></iframe>
+                  </div>
+                ) : (
+                  <>
+                    <img src={`https://image.tmdb.org/t/p/original${movie.poster_path}`} alt={movie.title} />
+                    <div className="play-button" onClick={() => fetchTrailer(movie)}>
+                      ▶
+                    </div>
+                    <div className="legend">
+                      <h2>{movie.title}</h2>
+                      <p>{movie.overview}</p>
+                    </div>
+                  </>
+                )}
+              </div>
+            ))}
+          </Carousel>
+        </div>
+      </section>
+
+      <section className="billboard">
         <div className="genres-container">
           <h2>Películas en Cartelera</h2>
           <div className="movies-list">
-            {nowPlayingMovies
-              .map((movie) => (
-                <div key={movie.id} className="movie-card">
-                  <img
-                    src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`}
-                    alt={movie.title}
-                    className="movie-image"
-                  />
-                  <div className="movie-overlay">
-                    <Button
-                      variant="contained"
-                      color="primary"
-                      onClick={(event) => fetchTrailer(movie, event)}
-                    >
-                      Ver más
-                    </Button>
-                  </div>
+            {nowPlayingMovies.map((movie) => (
+              <div key={movie.id} className="movie-card">
+                <img
+                  src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`}
+                  alt={movie.title}
+                  className="movie-image"
+                />
+                <div className="movie-overlay">
+                  <Button
+                    variant="contained"
+                    color="primary"
+                    onClick={(event: React.MouseEvent<HTMLElement>) => fetchTrailer(movie, event)}
+                  >
+                    Ver más
+                  </Button>
                 </div>
-              ))}
+              </div>
+            ))}
           </div>
         </div>
 
@@ -131,4 +172,4 @@ const billboard = () => {
   );
 };
 
-export default billboard
+export default Billboard;
