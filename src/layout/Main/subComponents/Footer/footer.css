@@ -98,7 +98,7 @@
   justify-content: center; /* Centra el contenido horizontalmente */
   text-align: center;
   padding: 20px 0;
-  background-color: #111;
+  background-color: transparent;
   width: 100%;
   position: relative;
   z-index: 1;

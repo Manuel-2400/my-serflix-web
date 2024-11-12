@@ -19,7 +19,7 @@ export const Footer = () => {
           <ul className="footer-list">
             <li><Link href="/Terms" className="footer-link"><i className="fas fa-file-contract"></i> Términos y Condiciones</Link></li>
             <li><Link href="/privacy" className="footer-link"><i className="fas fa-user-secret"></i> Política de Privacidad</Link></li>
-            <li><Link href="/conditions" className="footer-link"><i className="fas fa-cookie-bite"></i> Política de Cookies</Link></li>
+            <li><Link href="/cookies" className="footer-link"><i className="fas fa-cookie-bite"></i> Política de Cookies</Link></li>
           </ul>
         </div>
         <div className="footer-column">

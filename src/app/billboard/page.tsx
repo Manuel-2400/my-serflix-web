@@ -73,9 +73,9 @@ const Billboard = () => {
 
   return (
     <Main>
-      <section className="movie-section">
+      {/* <section className="movie-section">
         <div className="carousel-container">
-          <h1>Películas Populares</h1>
+          <h1>Catelera</h1>
           <Carousel showThumbs={false} autoPlay infiniteLoop>
             {nowPlayingMovies.map((movie) => (
               <div key={movie.id} className="carousel-item">
@@ -106,7 +106,7 @@ const Billboard = () => {
             ))}
           </Carousel>
         </div>
-      </section>
+      </section> */}
 
       <section className="billboard">
         <div className="genres-container">

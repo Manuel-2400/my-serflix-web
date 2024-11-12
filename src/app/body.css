@@ -193,6 +193,7 @@ section {
   border-radius: 5px;
   width: 100%;
   margin-top: 1rem;
+  border: 1px solid white;
 }
 
 .banner-image {
@@ -264,7 +265,7 @@ button.more-movies-btn {
   color: #fff;
   background-color: #d32f2f;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
   cursor: pointer;
 }
 
@@ -276,7 +277,8 @@ button.more-movies-btn {
   padding: 2rem;
   width: 100%;  /* Se asegura de que ocupe todo el ancho */
   margin: 0;    /* Elimina el margen para llegar hasta los bordes */
-  background-color: #d32f2f;
+    border-radius: 10px;
+    background-color: #d32f2f;
 }
 .popular-text {
   max-width: 40%;
@@ -303,12 +305,13 @@ button.more-movies-btn {
   background-color: white; /* Color para el botón */
   color: red;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
   cursor: pointer;
 }
 
 .popular-text button:hover {
-  background-color: #0056b3;
+  background-color: black;
+  color: white;
 }
 
 .image-popular {
@@ -323,7 +326,7 @@ button.more-movies-btn {
 .image-popular img {
   max-width: 100%;
   height: auto;
-  border-radius: 8px;
+  border-radius: 10px;
 }
 
 /* Estilos Responsivos */
@@ -346,4 +349,16 @@ button.more-movies-btn {
     max-width: 100%;
     margin-top: 1rem;
   }
+}
+
+/*Buscador*/
+.search{
+  background: transparent;
+  color: white;
+  width: 400px;
+  border-radius: 8px;
+  padding: 30px;
+  text-align: center;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
