@@ -8,7 +8,7 @@ import { useState, useEffect } from 'react';
 import Image from "next/image";
 import Link from 'next/link';
 import { Button } from '@mui/material';
-import imageCinema from './../img/img-controlTv.jpg';
+import imageControl from './../img/img-controlTv.jpg';
 import imageStart from './../img/img-Start.jpg';
 
 type Movie = {
@@ -51,13 +51,13 @@ export default function Home() {
               <input type="text" placeholder="Buscar" />
             </div>
             <div className="banner-image">
-              <Image width={350} height={350} src={imageCinema} alt="Control" />
+              <Image width={350} height={350} src={imageControl} alt="Control" />
             </div>
           </section>
 
           <section className="cartelera-section">
             <h2>Cartelera</h2>
-            {/* <div className="cartelera-items">
+            <div className="cartelera-items">
               {nowPlayingMovies.map((movie) => (
                 <div key={movie.id} className="movie-card">
                   <img
@@ -68,9 +68,9 @@ export default function Home() {
                   <div className="movie-title">{movie.title}</div>
                 </div>
               ))}
-            </div> */}
+            </div>
             <Link href="/billboard">
-              <Button variant="contained" color="primary" className="more-movies-btn">
+              <Button variant="contained" className="more-movies-btn">
                 Más películas
               </Button>
             </Link>

@@ -32,7 +32,7 @@ export const Footer = () => {
         <div className="footer-column">
           <h4 className="footer-title">Desarrolladores</h4>
           <ul className="footer-list">
-            <li><Link href="https://github.com/Manuel-2400" className="footer-link"  target="_blank">Manuel Valenzuela</Link></li>
+            <li><Link href="https://github.com/Profesor-2400" className="footer-link"  target="_blank">Manuel Valenzuela</Link></li>
             <li><Link href="https://github.com/DanielEscobar24" className="footer-link"  target="_blank">Daniel Escobar</Link></li>
             <li><Link href="https://github.com/Manuela-bit" className="footer-link"  target="_blank">Manuela Escobar</Link></li>
           </ul>

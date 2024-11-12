@@ -1,16 +1,31 @@
+.header h1{
+    font-size: 50px;
+}
+
+.equipo-page {
+    padding: 20px; 
+}
+  
 .team-list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-around; 
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
 }
   
 .team-member {
-    text-align: center;
-    margin: 20px;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    margin: 1rem; 
+    max-width: 250px; 
+    flex: 1 1 200px; 
 }
-
+  
 .team-member img {
-    border-radius: 10px;
-    max-width: 200px;
-   margin-bottom: 10px;
+    width: 100%; 
+    height: auto; 
+    border-radius: 10px; 
 }

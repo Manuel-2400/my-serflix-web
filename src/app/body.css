@@ -14,7 +14,7 @@
   }
   
   .YourLogin {
-    height: 100vh;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -255,8 +255,8 @@ cartelera-section {
   width: 100%;
   max-width: 1000px;
 }
-.
-.more-movies-btn {
+
+button.more-movies-btn {
   margin-top: 1.5rem;
   padding: 0.75rem 2rem;
   font-size: 1rem;
