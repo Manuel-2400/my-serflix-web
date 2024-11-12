@@ -1,131 +1,158 @@
-/* Espacio superior para el contenido principal */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .main-content {
-    padding-top: 70px; /* Agrega espacio para el header fijo */
+  margin-top: 70px;
 }
 
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background: linear-gradient(135deg, rgba(255, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  color: white;
+  font-family: Arial, sans-serif;
+  transition: background 0.3s, padding 0.3s;
+}
 
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    background: transparent; /* Fondo transparente */
-    color: white; /* Texto en blanco */
-    font-family: Arial, sans-serif;
-    background: black;
+.header.scrolled {
+  background: rgba(0, 0, 0, 1);
 }
 
 .logo {
-    text-decoration: none;
-    font-size: 20px;
-    font-weight: bold;
-    color: white; /* Texto blanco */
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  transition: color 0.3s;
+  animation: fadeIn 1s ease-in-out;
 }
 
-/* Navbar */
+.logo:hover {
+  color: #f2f2f2;
+}
+
 .nav {
-    display: flex;
-    align-items: center;
-    gap: 15px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 .nav-links {
-    list-style-type: none;
-    display: flex;
-    align-items: center;
-    gap: 15px;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 .nav-link {
-    text-decoration: none;
-    color: white; /* Texto blanco */
-    font-size: 14px;
-    transition: color 0.3s;
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  padding: 8px 0;
+  transition: color 0.3s, border-bottom 0.3s, transform 0.3s;
+  animation: fadeIn 1s ease-in-out;
 }
 
 .nav-link:hover {
-    color: #f2f2f2; /* Efecto hover */
+  color: #f2f2f2;
+  transform: scale(1.05);
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
 }
 
 .nav-link.active {
-    border-bottom: 2px solid #f2f2f2;
+  border-bottom: 2px solid #f2f2f2;
 }
 
 .nav-link.login {
-    border: 1px solid white;
-    color: white;
-    padding: 8px 16px;
-    border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s;
+  background-color: #f2f2f2;
+  color: black;
+  padding: 8px 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+  animation: fadeIn 1s ease-in-out;
 }
 
 .nav-link.login:hover {
-    background-color: white;
-    color: black;
+  background-color: #e0e0e0;
+  color: black;
+  transform: scale(1.05);
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
 }
 
-/* Menu Toggle Button (Hamburger) */
 .menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    cursor: pointer;
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
 .menu-toggle .hamburger-icon {
-    width: 25px;
-    height: 2px;
-    background-color: white;
-    display: block;
-    position: relative;
+  width: 25px;
+  height: 2px;
+  background-color: white;
+  display: block;
+  position: relative;
 }
 
 .menu-toggle .hamburger-icon::before,
 .menu-toggle .hamburger-icon::after {
-    content: "";
-    width: 25px;
-    height: 2px;
-    background-color: white;
-    position: absolute;
-    transition: transform 0.3s ease;
+  content: "";
+  width: 25px;
+  height: 2px;
+  background-color: white;
+  position: absolute;
+  transition: transform 0.3s ease;
 }
 
 .menu-toggle .hamburger-icon::before {
-    transform: translateY(-8px);
+  transform: translateY(-8px);
 }
 
 .menu-toggle .hamburger-icon::after {
-    transform: translateY(8px);
+  transform: translateY(8px);
 }
 
-/* Responsive Styles */
 @media (max-width: 900px) {
-    .nav {
-        display: none;
-    }
+  .nav {
+    display: none;
+  }
 
-    .menu-toggle {
-        display: block;
-    }
+  .menu-toggle {
+    display: block;
+  }
 
-    /* Menu visibility when toggled */
-    .nav.open {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        right: 30px;
-        background-color: rgba(0, 0, 0, 0.8); /* Fondo semitransparente */
-        padding: 15px;
-        border-radius: 8px;
-        z-index: 999;
-    }
+  .nav.open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 30px;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 15px;
+    border-radius: 8px;
+    z-index: 999;
+  }
 
-    .nav-links {
-        flex-direction: column;
-        gap: 10px;
-    }
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
