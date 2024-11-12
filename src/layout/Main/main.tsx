@@ -3,13 +3,15 @@ import { MainProps } from "./types";
 import { Header } from "./subComponents/Header/header";
 import { Footer } from "./subComponents/Footer/footer";
 
-export function Main (props:MainProps) {
-    const {children} = props;
+export function Main(props: MainProps) {
+    const { children } = props;
     return (
-        <div>
+        <div className="main-container">
             <Header />
-            {children}
+            <main className="main-content">
+                {children}
+            </main>
             <Footer />
         </div>
-    )
+    );
 }

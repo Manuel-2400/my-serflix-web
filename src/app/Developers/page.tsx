@@ -1,24 +1,25 @@
 import React from 'react';
 import './developers.css';
-import Image from 'next/image';
+import ImageDani from './../../img/img-Daniel.jpg';
 import { Main } from '@/layout/Main/main';
+import Image from 'next/image';
 
 const Developer = () => {
   const teamMembers = [
     {
       nombre: 'Daniel Angel Escobar',
       descripcion: 'Todo empieza con una idea. Tal vez quieras comenzar un negocio o convertir un pasatiempo en algo más...',
-      imagen: 'img-Daniel.png',
+      imagen: 'ImageDani.jpg',
     },
     {
-      nombre: 'Nombre Apellidos',
+      nombre: 'Manuela Escobar',
       descripcion: 'Todo empieza con una idea. Tal vez quieras comenzar un negocio o convertir un pasatiempo en algo más...',
-      imagen: 'persona2.png',
+      imagen: 'ImageManuela.jpg',
     },
     {
-      nombre: 'Nombre Apellidos',
+      nombre: 'Manuel Valenzuela',
       descripcion: 'Todo empieza con una idea. Tal vez quieras comenzar un negocio o convertir un pasatiempo en algo más...',
-      imagen: 'persona3.png',
+      imagen: 'ImageManuel.jpg',
     },
   ];
 
@@ -33,7 +34,7 @@ const Developer = () => {
         <section className="team-list">
           {teamMembers.map((member, index) => (
             <div className="team-member" key={index}>
-              <Image src={member.imagen} alt={`${member.nombre}`} />
+              <Image width={350} height={350} src={ImageDani} alt="Control" />
               <h3>{member.nombre}</h3>
               <p>{member.descripcion}</p>
             </div>
