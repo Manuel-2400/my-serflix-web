@@ -19,14 +19,14 @@ export const Footer = () => {
           <ul className="footer-list">
           <li><Link href="/Terms" className="footer-link">Términos y Condiciones</Link></li>
             <li><Link href="/privacy" className="footer-link">Política de Privacidad</Link></li>
-            <li><Link href="/conditions" className="footer-link">Política de Cookies</Link></li>
+            <li><Link href="/cookies" className="footer-link">Política de Cookies</Link></li>
           </ul>
         </div>
         <div className="footer-column">
           <h4 className="footer-title">Contacto</h4>
           <ul className="footer-list">
             <li><Link href="/Contact" className="footer-link">Contacto</Link></li>
-            <li><Link href="#" className="footer-link">Soporte</Link></li>
+            <li><Link href="/support" className="footer-link">Soporte</Link></li>
           </ul>
         </div>
         <div className="footer-column">

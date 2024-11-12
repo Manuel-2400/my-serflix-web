@@ -1,14 +1,37 @@
+body {
+  height: 100%; 
+  margin: 0px; 
+  justify-content: center;
+  align-items: center; 
+  background-color: black; 
+}
+
+/* Estilo general para el contenedor */
 .terms-and-conditions {
-    font-family: Arial, sans-serif;
-    color: #333;
-    text-align: center;
-  }  
-  
-  .terms-text {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    color: #555;
-    text-align: left;
-    line-height: 1.6;
-  }
+  background-color: black; 
+  color: #e0e0e0; 
+  padding: 20px; 
+  margin: 0 auto;
+  display: grid;
+}
+
+/* Estilo para el título principal */
+.terms-and-conditions h1 {
+  color: red;
+  text-align: center; 
+  margin-bottom: 20px; 
+}
+
+/* Estilo para los subtítulos */
+.terms-and-conditions h2 {
+  color: #333; 
+  margin-top: 20px; 
+}
+
+/* Estilo para los párrafos y listas */
+.terms-and-conditions p,
+.terms-and-conditions ul {
+  text-align: left; 
+  margin-bottom: 15px; 
+  max-width: 800px;
+}

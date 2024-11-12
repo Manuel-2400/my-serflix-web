@@ -1,6 +1,5 @@
+"use client";
 import React from 'react';
-import './contact.css';
-// import Image from 'next/image';
 import { Main } from '@/layout/Main/main';
 
 const Contact = () => {
@@ -29,22 +28,6 @@ const Contact = () => {
       {/* Mapa */}
       <section className="map">
         {/* <Image width={1} height={1} src="map-placeholder.png" alt="Ubicación en el mapa" /> */}
-      </section>
-
-      {/* Formulario de contacto */}
-      <section className="contact-form">
-        <h2>Ponte en contacto.</h2>
-        <form>
-          <label>
-            Correo electrónico (obligatorio)
-            <input type="email" required />
-          </label>
-          <label>
-            Mensaje (obligatorio)
-            <textarea required></textarea>
-          </label>
-          <button type="submit">ENVIAR</button>
-        </form>
       </section>
     </div>
     </Main>
