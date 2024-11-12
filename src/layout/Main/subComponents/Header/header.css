@@ -1,0 +1,131 @@
+/* Espacio superior para el contenido principal */
+.main-content {
+    padding-top: 70px; /* Agrega espacio para el header fijo */
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 50px;
+
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: transparent; /* Fondo transparente */
+    color: white; /* Texto en blanco */
+    font-family: Arial, sans-serif;
+    background: black;
+}
+
+.logo {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: white; /* Texto blanco */
+}
+
+/* Navbar */
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: white; /* Texto blanco */
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #f2f2f2; /* Efecto hover */
+}
+
+.nav-link.active {
+    border-bottom: 2px solid #f2f2f2;
+}
+
+.nav-link.login {
+    border: 1px solid white;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-link.login:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Menu Toggle Button (Hamburger) */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-toggle .hamburger-icon {
+    width: 25px;
+    height: 2px;
+    background-color: white;
+    display: block;
+    position: relative;
+}
+
+.menu-toggle .hamburger-icon::before,
+.menu-toggle .hamburger-icon::after {
+    content: "";
+    width: 25px;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    transition: transform 0.3s ease;
+}
+
+.menu-toggle .hamburger-icon::before {
+    transform: translateY(-8px);
+}
+
+.menu-toggle .hamburger-icon::after {
+    transform: translateY(8px);
+}
+
+/* Responsive Styles */
+@media (max-width: 900px) {
+    .nav {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Menu visibility when toggled */
+    .nav.open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 30px;
+        background-color: rgba(0, 0, 0, 0.8); /* Fondo semitransparente */
+        padding: 15px;
+        border-radius: 8px;
+        z-index: 999;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

@@ -1,0 +1,110 @@
+.about-us {
+    font-family: Arial, sans-serif;
+    color: #333;
+    text-align: center;
+  }
+  
+  .header {
+    background-color: #f5f5f5;
+    padding: 20px;
+  }
+  
+  .header h1 {
+    font-size: 3rem;
+    color: #ff4a4a;
+  }
+  
+  .header h1 span {
+    display: block;
+  }
+  
+  .description {
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .image-main {
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  .images {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .image-group {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .image-group img {
+    width: 100px;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  .image-text {
+    margin-left: 20px;
+  }
+  
+  .image-text h2 {
+    color: #ff4a4a;
+  }
+  
+  .faq {
+    padding: 20px;
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: left;
+  }
+  
+  .faq h3 {
+    cursor: pointer;
+    color: #ff4a4a;
+  }
+  
+  .footer {
+    background-color: #f5f5f5;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .footer-content p {
+    margin: 0;
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .newsletter {
+    display: flex;
+    gap: 5px;
+  }
+  
+  .newsletter input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  .newsletter button {
+    padding: 5px 10px;
+    border: none;
+    background-color: #ff4a4a;
+    color: white;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+  
