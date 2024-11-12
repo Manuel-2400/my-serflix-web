@@ -1,3 +1,4 @@
+"use client";
 import React from 'react';
 import './developers.css';
 import ImageDani from './../../img/img-Daniel.jpg';

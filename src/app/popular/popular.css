@@ -1,0 +1,115 @@
+/* Estilos para el componente de películas populares */
+body, .genres-container {
+    font-family: 'Arial', sans-serif;
+  }
+
+  
+  .genres-container {
+    padding: 20px;
+    background: black;
+  }
+  
+  .genres-container h2 {
+    font-size: 2.2em; /* Tamaño grande para el título principal */
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #fff;
+    letter-spacing: -0.5px; /* Ajuste de espacio entre letras */
+  }
+  
+  .movies-list {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center; /* Centra los elementos cuando hay espacio */
+  }
+  
+  .movie-card {
+    position: relative;
+    width: 200px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    border-radius: 8px; /* Redondeo de esquinas */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Agrega sombra para darle profundidad */
+  }
+  
+  .movie-card:hover {
+    transform: scale(1.05); /* Efecto de aumento en hover */
+  }
+  
+  .movie-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover; /* Para que las imágenes no se deformen */
+    border-radius: 8px;
+  }
+  
+  .movie-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro con opacidad */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    border-radius: 8px;
+    transition: opacity 0.3s ease;
+  }
+  
+  .movie-card:hover .movie-overlay {
+    opacity: 1; /* Muestra el overlay solo cuando se hace hover */
+  }
+  
+  .movie-overlay .MuiButton-contained {
+    background-color: #e50914;
+    color: white;
+    padding: 10px 16px;
+    font-size: 1em;
+    font-weight: 500;
+    border-radius: 4px;
+  }
+  
+  .movie-overlay .MuiButton-contained:hover {
+    background-color: #f40612;
+  }
+  
+  /* Estilos del popover */
+  .popover-content {
+    background-color: #111;
+    padding: 16px;
+    width: 350px;
+    color: #fff;
+    border-radius: 8px;
+  }
+  
+  .popover-content iframe {
+    margin-bottom: 8px;
+    border-radius: 8px;
+  }
+  
+  .popover-content h6,
+  .popover-content p,
+  .popover-content span {
+    color: #fff;
+  }
+  
+  .popover-content .MuiTypography-h6 {
+    font-size: 1.3em; /* Ajuste para los títulos del popover */
+    font-weight: 600;
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+  }
+  
+  .popover-content .MuiTypography-body2 {
+    font-size: 1.1em;
+    margin-bottom: 12px;
+  }
+  
+  .popover-content .MuiTypography-subtitle2 {
+    font-size: 1em;
+    color: #aaa;
+  }
+  
