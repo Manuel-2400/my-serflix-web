@@ -35,6 +35,7 @@
 .nav-links {
     list-style-type: none;
     display: flex;
+    align-items: center;
     gap: 15px;
 }
 
