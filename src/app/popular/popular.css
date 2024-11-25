@@ -10,18 +10,18 @@ body, .genres-container {
   }
   
   .genres-container h2 {
-    font-size: 2.2em; /* Tamaño grande para el título principal */
+    font-size: 2.2em; 
     font-weight: 600;
     margin-bottom: 20px;
     color: #fff;
-    letter-spacing: -0.5px; /* Ajuste de espacio entre letras */
+    letter-spacing: -0.5px; 
   }
   
   .movies-list {
     display: flex;
     gap: 15px;
     flex-wrap: wrap;
-    justify-content: center; /* Centra los elementos cuando hay espacio */
+    justify-content: center; 
   }
   
   .movie-card {
@@ -29,18 +29,18 @@ body, .genres-container {
     width: 200px;
     transition: transform 0.3s ease;
     cursor: pointer;
-    border-radius: 8px; /* Redondeo de esquinas */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Agrega sombra para darle profundidad */
+    border-radius: 8px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
   }
   
   .movie-card:hover {
-    transform: scale(1.05); /* Efecto de aumento en hover */
+    transform: scale(1.05); 
   }
   
   .movie-image {
     width: 100%;
     height: 300px;
-    object-fit: cover; /* Para que las imágenes no se deformen */
+    object-fit: cover; 
     border-radius: 8px;
   }
   
@@ -50,7 +50,7 @@ body, .genres-container {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro con opacidad */
+    background-color: rgba(0, 0, 0, 0.6); 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -60,7 +60,7 @@ body, .genres-container {
   }
   
   .movie-card:hover .movie-overlay {
-    opacity: 1; /* Muestra el overlay solo cuando se hace hover */
+    opacity: 1; 
   }
   
   .movie-overlay .MuiButton-contained {
@@ -80,7 +80,6 @@ body, .genres-container {
   .popover-content {
     background-color: #111;
     padding: 16px;
-    width: 350px;
     color: #fff;
     border-radius: 8px;
   }
@@ -97,7 +96,7 @@ body, .genres-container {
   }
   
   .popover-content .MuiTypography-h6 {
-    font-size: 1.3em; /* Ajuste para los títulos del popover */
+    font-size: 1.3em; 
     font-weight: 600;
     margin-bottom: 8px;
     letter-spacing: -0.5px;

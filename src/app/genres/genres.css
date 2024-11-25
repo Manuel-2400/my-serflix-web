@@ -1,4 +1,3 @@
-/* Aplicar fuente Arial a todo el contenido */
 body, .genres-container {
     font-family: 'Arial', sans-serif;
   }
@@ -13,6 +12,7 @@ body, .genres-container {
   }
   
   .genre-section h2 {
+    text-align: center; 
     font-size: 2.2em;
     font-weight: 600;
     margin-bottom: 16px;
@@ -20,23 +20,24 @@ body, .genres-container {
     letter-spacing: -0.5px;
   }
   
+  
   .movies-list {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    justify-content: space-around; /* Asegura que las películas se centren */
+    justify-content: space-around; 
     align-items: center;
   }
   
   /* Estilos para las tarjetas de las películas */
   .movie-card {
     position: relative;
-    width: 150px; /* Definir un tamaño base de la tarjeta */
+    width: 150px; 
     transition: transform 0.3s ease;
     cursor: pointer;
-    margin-bottom: 10px; /* Añadir margen inferior para evitar que se apilen */
+    margin-bottom: 10px; 
     display: flex;
-    justify-content: center; /* Centra las tarjetas dentro de su contenedor */
+    justify-content: center; 
   }
   
   .movie-card:hover {
@@ -82,48 +83,75 @@ body, .genres-container {
     background-color: #f40612;
   }
   
-  /* Estilos mejorados para el popover */
-  .popover-content {
-    background-color: #111;
-    padding: 16px;
-    width: 350px;
-    color: #fff;
-    border-radius: 8px;
-  }
-  
-  .popover-content iframe {
-    margin-bottom: 8px;
-    border-radius: 8px;
-  }
-  
-  .popover-content h6,
-  .popover-content p,
-  .popover-content span {
-    color: #fff;
-  }
-  
-  .popover-content .MuiTypography-h6 {
-    font-size: 1.3em;
-    font-weight: 600;
-    margin-bottom: 8px;
-    letter-spacing: -0.5px;
-  }
-  
-  .popover-content .MuiTypography-body2 {
-    font-size: 1.1em;
-    margin-bottom: 12px;
-  }
-  
-  .popover-content .MuiTypography-subtitle2 {
-    font-size: 1em;
-    color: #aaa;
-  }
-  
-  .movie-overlay .MuiButton-contained {
-    background-color: #f50057;
-    color: white;
-  }
-  
+/* Personalización completa del contenedor dentro del Popover */
+.popover-content {
+  background-color: #111; 
+  padding: 20px;  
+  width: 100%; 
+  height: 100%;  
+  color: #fff;
+  border-radius: 12px;  
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; 
+  align-items: center;
+  text-align: center;
+  overflow-y: auto;  
+  box-sizing: border-box;  
+  border: 2px solid #f50057;  
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);  
+  background: linear-gradient(135deg, #333, #111); 
+}
+
+/* Estilos del iframe para que se vea bien y no se desborde */
+.popover-content iframe {
+  margin-bottom: 16px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 700px; 
+  height: 400px;  
+  border: 2px solid #f50057; 
+}
+
+/* Estilo para los encabezados */
+.popover-content h6 {
+  font-size: 1.4em;
+  font-weight: 600;
+  margin-bottom: 12px;
+  letter-spacing: -0.5px;
+  text-transform: uppercase;  
+  color: #f50057;  
+}
+
+/* Estilo para la descripción */
+.popover-content .MuiTypography-body2 {
+  font-size: 1.1em;
+  margin-bottom: 16px;
+  line-height: 1.6; 
+}
+
+/* Estilo para los géneros de la película */
+.popover-content .MuiTypography-subtitle2 {
+  font-size: 1.1em;
+  color: #aaa;  
+  margin-bottom: 16px;
+}
+
+/* Botón "Ver más" */
+.movie-overlay .MuiButton-contained {
+  background-color: #f50057; 
+  color: white;
+  font-weight: 600;  
+  border-radius: 8px;  
+  padding: 8px 16px;  
+  transition: background-color 0.3s ease;  
+}
+
+.movie-overlay .MuiButton-contained:hover {
+  background-color: #d40047;  
+}
+
+ 
   /* Media Queries para hacer el componente responsive */
   
   /* Pantallas pequeñas (celulares) */
@@ -135,9 +163,7 @@ body, .genres-container {
     .genre-section h2 {
       font-size: 1.5em;
     }
-  
-
-  
+    
     .movie-card {
       width: 100%;
       max-width: 250px;
@@ -184,8 +210,6 @@ body, .genres-container {
       margin-bottom: 20px;
     }
   
-    .popover-content {
-      width: 350px;
-    }
+
   }
   

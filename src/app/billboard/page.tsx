@@ -73,41 +73,6 @@ const Billboard = () => {
 
   return (
     <Main>
-      {/* <section className="movie-section">
-        <div className="carousel-container">
-          <h1>Catelera</h1>
-          <Carousel showThumbs={false} autoPlay infiniteLoop>
-            {nowPlayingMovies.map((movie) => (
-              <div key={movie.id} className="carousel-item">
-                {playingTrailerId === movie.id && selectedTrailer ? (
-                  <div className="iframe-container">
-                    <iframe
-                      width="560"
-                      height="315"
-                      src={`https://www.youtube.com/embed/${selectedTrailer}`}
-                      frameBorder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                    ></iframe>
-                  </div>
-                ) : (
-                  <>
-                    <img src={`https://image.tmdb.org/t/p/original${movie.poster_path}`} alt={movie.title} />
-                    <div className="play-button" onClick={() => fetchTrailer(movie)}>
-                      ▶
-                    </div>
-                    <div className="legend">
-                      <h2>{movie.title}</h2>
-                      <p>{movie.overview}</p>
-                    </div>
-                  </>
-                )}
-              </div>
-            ))}
-          </Carousel>
-        </div>
-      </section> */}
-
       <section className="billboard">
         <div className="genres-container">
           <h2>Películas en Cartelera</h2>
@@ -145,6 +110,17 @@ const Billboard = () => {
             vertical: 'top',
             horizontal: 'center',
           }}
+          PaperProps={{
+            style: {
+              width: '80vw',  
+              height: '70vh', 
+              maxWidth: '800px', 
+              padding: '20px', 
+              overflowY: 'auto', 
+              borderRadius: '8px',
+              backgroundColor: 'transparent', 
+            },
+          }}
         >
           <div className="popover-content">
             {selectedTrailer && (
@@ -167,6 +143,7 @@ const Billboard = () => {
             )}
           </div>
         </Popover>
+
       </section>
     </Main>
   );

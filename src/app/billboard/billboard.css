@@ -2,13 +2,11 @@ body,
 .genres-container {
     font-family: 'Arial', sans-serif;
     background: #000;
-    /* Fondo completamente negro */
 }
 
 .genres-container {
     padding: 20px;
     background: #000;
-    /* Fondo negro para la sección */
 }
 
 .genres-container h2 {
@@ -16,7 +14,6 @@ body,
     font-weight: 600;
     margin-bottom: 20px;
     color: white;
-    /* Color brillante de título */
     letter-spacing: -0.5px;
 }
 
@@ -55,7 +52,6 @@ body,
     right: 0;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.6);
-    /* Fondo oscuro con opacidad */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -70,7 +66,6 @@ body,
 
 .movie-overlay .MuiButton-contained {
     background-color: #e50914;
-    /* Rojo característico */
     color: white;
     padding: 10px 16px;
     font-size: 1em;
@@ -80,14 +75,12 @@ body,
 
 .movie-overlay .MuiButton-contained:hover {
     background-color: #f40612;
-    /* Rojo más claro en hover */
 }
 
 /* Estilos del popover */
 .popover-content {
     background-color: #111;
     padding: 16px;
-    width: 350px;
     color: #fff;
     border-radius: 8px;
 }
@@ -120,22 +113,18 @@ body,
     color: #aaa;
 }
 
-/* Ajustes opcionales para estilo de cartelera */
 
 /* Fondo de cartelera completamente negro */
 .genres-container {
     background: #000;
-    /* Fondo completamente negro */
 }
 
 .movie-overlay {
     background-color: rgba(0, 0, 0, 0.75);
-    /* Superposición más oscura para un contraste más alto */
 }
 
 .movie-card:hover {
     transform: scale(1.05) rotate(2deg);
-    /* Añadir rotación en el hover */
 }
 
 /* Añadir un toque de transición a la caja de la tarjeta */
@@ -146,7 +135,6 @@ body,
 /* Agregar un color de borde al hacer hover */
 .movie-card:hover {
     border: 3px solid #00bcd4;
-    /* Añadir borde en el hover */
 }
 
 /* Estilos manuela */

@@ -3,6 +3,7 @@ import './about.css';
 import Image from "next/image";
 import { Main } from "@/layout/Main/main";
 import imageLibrary from './../../img/img-Library.jpg';
+import imageCinema from './../../img/img-Cinema.jpg';
 
 const About = () => {
   return (
@@ -24,16 +25,22 @@ const About = () => {
         </div>
       </section>
         <section className="faq">
-          <h3>¿Somos una copia de Netflix?</h3>
-          <p>No, en absoluto. Aunque utilizamos colores y formatos similares para crear un ambiente familiar y acogedor, 
-            nuestra propuesta es única y está diseñada para ofrecerte una experiencia diferente y personalizada.</p>
-          <h3>¿Cómo puedo buscar películas en su plataforma?</h3>
-          <p>Puedes buscar películas utilizando la barra de búsqueda en la parte superior de la página. 
-            Simplemente ingresa el título de la película, el nombre del director o el género que te interese, y te mostraremos una lista de opciones disponibles.</p>
-          <h3>¿Puedo filtrar las películas por género o año?</h3>
-          <p>Sí, nuestra plataforma te permite filtrar las películas por género, año de estreno y calificación. 
-            Utiliza los filtros disponibles en la barra lateral para encontrar fácilmente las películas que se ajusten a tus preferencias.</p>
+          <div className="faq-text">
+            <h3>¿Somos una copia de Netflix?</h3>
+            <p>No, en absoluto. Aunque utilizamos colores y formatos similares para crear un ambiente familiar y acogedor, 
+              nuestra propuesta es única y está diseñada para ofrecerte una experiencia diferente y personalizada.</p>
+            <h3>¿Cómo puedo buscar películas en su plataforma?</h3>
+            <p>Puedes buscar películas utilizando la barra de búsqueda en la parte superior de la página. 
+              Simplemente ingresa el título de la película, el nombre del director o el género que te interese, y te mostraremos una lista de opciones disponibles.</p>
+            <h3>¿Puedo filtrar las películas por género o año?</h3>
+            <p>Sí, nuestra plataforma te permite filtrar las películas por género, año de estreno y calificación. 
+            Utiliza los filtros disponibles en la barra lateral para encontrar fácilmente las películas que se ajusten a tus preferencias.</p>            
+          </div>          
+          <div className="banner-image-faq">
+            <Image width={500} height={350} src={imageCinema} alt="Imagen-Libreria-BlancoyNegro" />
+          </div>
         </section>
+        
       </div>
     </Main>
 

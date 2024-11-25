@@ -107,18 +107,29 @@ const Genres = () => {
       </div>
 
       <Popover
-        open={Boolean(anchorEl)}
-        anchorEl={anchorEl}
-        onClose={handleClose}
-        anchorOrigin={{
-          vertical: 'top',
-          horizontal: 'center',
-        }}
-        transformOrigin={{
-          vertical: 'top',
-          horizontal: 'center',
-        }}
-      >
+  open={Boolean(anchorEl)}
+  anchorEl={anchorEl}
+  onClose={handleClose}
+  anchorOrigin={{
+    vertical: 'top',
+    horizontal: 'center',
+  }}
+  transformOrigin={{
+    vertical: 'top',
+    horizontal: 'center',
+  }}
+  PaperProps={{
+    style: {
+      width: '80vw', 
+      height: '70vh', 
+      maxWidth: '800px', 
+      padding: '20px', 
+      overflowY: 'auto', 
+      borderRadius: '8px', 
+      backgroundColor: 'transparent',
+    },
+  }}
+>
         <div className="popover-content">
           {selectedTrailer && (
             <iframe
@@ -144,6 +155,9 @@ const Genres = () => {
           )}
         </div>
       </Popover>
+
+
+
     </Main>
   );
 };

@@ -106,6 +106,18 @@ const PopularMovies = () => {
             vertical: 'top',
             horizontal: 'center',
           }}
+          PaperProps={{
+            style: {
+              width: '80vw',  
+              height: '70vh', 
+              maxWidth: '800px', 
+              padding: '20px', 
+              overflowY: 'auto', 
+              borderRadius: '8px', 
+              backgroundColor: 'transparent', 
+              boxShadow: 'none', 
+            },
+          }}
         >
           <div className="popover-content">
             {selectedTrailer && (
@@ -128,6 +140,7 @@ const PopularMovies = () => {
             )}
           </div>
         </Popover>
+
       </section>
     </Main>
   );
