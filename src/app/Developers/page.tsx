@@ -30,7 +30,7 @@ const Developer = () => {
     <Main>
       <div className="equipo-page">
         {/* Título */}
-        <section className="header">
+        <section className="titulo">
           <h1>Nuestro equipo</h1>
         </section>
         {/* Lista de miembros del equipo */}
