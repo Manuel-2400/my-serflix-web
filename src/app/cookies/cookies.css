@@ -1,37 +1,38 @@
 body {
-    height: 100%; 
-    margin: 0px; 
-    justify-content: center;
-    align-items: center; 
-    background-color: black; 
-  }
-  
-  /* Estilo general para el contenedor */
-  .cookies {
-    background-color: black; 
-    color: #e0e0e0; 
-    padding: 20px; 
-    margin: 0 auto;
-    display: grid;
-  }
-  
-  /* Estilo para el título principal */
-  .cookies h1 {
-    color: red;
-    text-align: center; 
-    margin-bottom: 20px; 
-  }
-  
-  /* Estilo para los subtítulos */
-  .cookies h2 {
-    color: #333; 
-    margin-top: 20px; 
-  }
-  
-  /* Estilo para los párrafos y listas */
-  .cookies p,
-  .cookies ul {
-    text-align: left; 
-    margin-bottom: 15px; 
-    max-width: 800px;
-  }
+  height: 100%;
+  margin: 0px;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+/* Estilo general para el contenedor */
+.cookies {
+  background-color: black;
+  color: #e0e0e0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Estilo para el título principal */
+.cookies h1 {
+  color: red;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Estilo para los subtítulos */
+.cookies h2 {
+  color: #333;
+  margin-top: 20px;
+}
+
+/* Estilo para los párrafos y listas */
+.cookies p,
+.cookies ul {
+  text-align: left;
+  margin-bottom: 15px;
+  max-width: 800px;
+}
