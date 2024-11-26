@@ -5,7 +5,6 @@
 import { useEffect, useState } from 'react';
 import { Main } from '@/layout/Main/main';
 import { Popover, Button, Typography } from '@mui/material';
-import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import './billboard.css';
 
@@ -27,7 +26,6 @@ const Billboard = () => {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const [selectedMovie, setSelectedMovie] = useState<Movie | null>(null);
   const [selectedTrailer, setSelectedTrailer] = useState<string | null>(null);
-  const [playingTrailerId, setPlayingTrailerId] = useState<number | null>(null); // ID de la película en reproducción en el carrusel
 
   useEffect(() => {
     const fetchMovies = async () => {
@@ -59,7 +57,6 @@ const Billboard = () => {
 
       const trailer = data.results.find((video: Video) => video.type === 'Trailer');
       setSelectedTrailer(trailer ? trailer.key : null);
-      if (!event) setPlayingTrailerId(movie.id); // Solo para el carrusel
     } catch (error) {
       console.error("Error fetching trailer:", error);
     }
@@ -112,13 +109,13 @@ const Billboard = () => {
           }}
           PaperProps={{
             style: {
-              width: '80vw',  
-              height: '70vh', 
-              maxWidth: '800px', 
-              padding: '20px', 
-              overflowY: 'auto', 
+              width: '80vw',
+              height: '70vh',
+              maxWidth: '800px',
+              padding: '20px',
+              overflowY: 'auto',
               borderRadius: '8px',
-              backgroundColor: 'transparent', 
+              backgroundColor: 'transparent',
             },
           }}
         >

@@ -1,18 +1,15 @@
 'use client'
 import React from 'react';
-import { Header } from '../../../my-serflix-web/src/layout/Main/subComponents/Header/header';
-import { Footer } from '@/layout/Main/subComponents/Footer/footer';
+import { Main } from '@/layout/Main/main';
 
 function working() {
   return (
-    <main>
-    <Header />
-    <div className="App" style={styles.container}>
-      <h1 style={styles.text}>🛠️ 404 - Estamos trabajando en ello... 🛠️</h1>
-    </div>
-    <Footer />
-    </main>
-   
+    <Main>
+      <div className="App" style={styles.container}>
+        <h1 style={styles.text}>🛠️ 404 - Estamos trabajando en ello... 🛠️</h1>
+      </div>
+    </Main>
+
   );
 }
 

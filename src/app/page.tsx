@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import { Main } from "@/layout/Main/main";
@@ -43,7 +44,7 @@ export default function Home() {
   return (
     <Main>
       {isLoggedIn ? (
-        <section className="YourLogin">          
+        <section className="YourLogin">
 
           <section className="banner">
             <div className="banner-text">
