@@ -1,6 +1,6 @@
 'use client'
 import React from 'react';
-import { Header } from '../../../my-serflix-web/src/layout/Main/subComponents/Header/header';
+import { Header } from '@/layout/Main/subComponents/Header/header';
 import { Footer } from '@/layout/Main/subComponents/Footer/footer';
 
 function working() {
