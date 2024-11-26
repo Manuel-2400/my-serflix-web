@@ -1,36 +1,39 @@
 "use client";
 
-import { Main } from "@/layout/Main/main";
-import './register.css'
-import { FormEvent } from "react";
+// Importaciones necesarias
+import { Main } from "@/layout/Main/main"; // Importa el componente Main
+import './register.css'; // Importa los estilos CSS para el registro
+import { FormEvent } from "react"; // Importa el tipo FormEvent de React
 
 const Register = () => {
+    // Función para manejar el registro de usuarios
     const handleSignUp = async (event: FormEvent<HTMLFormElement>) => {
-        event.preventDefault();
-        event.stopPropagation();
+        event.preventDefault(); // Previene el comportamiento predeterminado del formulario (recargar la página)
+        event.stopPropagation(); // Detiene la propagación del evento
 
-        const formData = new FormData(event.target as HTMLFormElement)
+        // Crea un objeto FormData a partir del formulario enviado
+        const formData = new FormData(event.target as HTMLFormElement);
 
+        // Crea un objeto Headers para incluir los encabezados de la solicitud
         const myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/json");
 
+        // Realiza una solicitud HTTP al endpoint de registro
         const result = await fetch('http://localhost:8000/sign-up', {
-            method: 'POST',
-            headers: myHeaders,
+            method: 'POST', // Especifica que la solicitud es de tipo POST
+            headers: myHeaders, // Incluye los encabezados de la solicitud
             body: JSON.stringify({
-                email: formData.get('email'),
+                email: formData.get('email'), // Convierte los datos del formulario a una cadena JSON
                 password: formData.get('password'),
             }),
-        }).then((response) => response.json());
+        }).then((response) => response.json()); // Procesa la respuesta de la solicitud y la convierte a un objeto JSON
 
-        console.log(result);
-
-    }
-
+        console.log(result); // Imprime el resultado de la solicitud en la consola
+    };
 
     return (
         <Main>
-            <section className="Register" >
+            <section className="Register">
                 <div className="wrapper">
                     <form onSubmit={handleSignUp}>
                         <h2>Registrate</h2>
@@ -52,6 +55,6 @@ const Register = () => {
             </section>
         </Main>
     );
-}
+};
 
-export default Register
+export default Register;
